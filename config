@@ -22,5 +22,3 @@ WARN= -O2 -Wall -fPIC -W -Waggregate-return -Wcast-align -Wmissing-prototypes -W
 INCS= -I$(LUA_INC) -I$(OPENLDAP_INC) -I$(COMPAT_DIR)
 CFLAGS= $(WARN) $(INCS)
 CC= gcc
-
-# $Id: config,v 1.5 2006-07-24 01:42:06 tomas Exp $

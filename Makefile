@@ -1,7 +1,5 @@
-# $Id: Makefile,v 1.30 2007-03-13 22:07:33 godinho Exp $
-
 T= lua_ldap
-V= 1.2.3
+V= 1.0.0
 CONFIG= ./config
 
 include $(CONFIG)

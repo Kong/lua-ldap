@@ -1,12 +1,11 @@
 #!/usr/bin/env lua5.1
 ---------------------------------------------------------------------
--- LuaLDAP test file.
+-- lua_ldap test file.
 -- This test will create a copy of an existing entry on the
 -- directory to work on.  This new entry will be modified,
 -- renamed and deleted at the end.
 --
 -- See Copyright Notice in license.html
--- $Id: test.lua,v 1.15 2006-07-24 01:36:51 tomas Exp $
 ---------------------------------------------------------------------
 
 --
@@ -72,7 +71,7 @@ function test_object (obj, objmethods)
 	-- checking object type.
 	assert2 ("userdata", type(obj), "incorrect object type")
 	-- trying to get metatable.
-	assert2 ("LuaLDAP: you're not allowed to get this metatable",
+	assert2 ("lua_ldap: you're not allowed to get this metatable",
 		getmetatable(obj), "error permitting access to object's metatable")
 	-- trying to set metatable.
 	assert2 (false, pcall (setmetatable, ENV, {}))
@@ -96,7 +95,7 @@ end
 -- basic checking test.
 ---------------------------------------------------------------------
 function basic_test ()
-	local ld = CONN_OK (lualdap.open_simple (HOSTNAME, WHO, PASSWORD))
+	local ld = CONN_OK (lua_ldap.open_simple (HOSTNAME, WHO, PASSWORD))
 	assert2 (1, ld:close(), "couldn't close connection")
 	-- trying to close without a connection.
 	assert2 (false, pcall (ld.close))
@@ -109,14 +108,14 @@ function basic_test ()
 	-- it is ok to close a closed object, but nil is returned instead of 1.
 	assert2 (nil, ld:close())
 	-- trying to connect to an invalid host.
-	assert2 (nil, lualdap.open_simple ("unknown-server"), "this should be an error")
+	assert2 (nil, lua_ldap.open_simple ("unknown-server"), "this should be an error")
 	-- reopen the connection.
 	-- first, try using TLS
-	local ok = lualdap.open_simple (HOSTNAME, WHO, PASSWORD, true)
+	local ok = lua_ldap.open_simple (HOSTNAME, WHO, PASSWORD, true)
 	if not ok then
 		-- second, try without TLS
 		io.write ("\nWarning!  Couldn't connect with TLS.  Trying again without it.")
-		ok = lualdap.open_simple (HOSTNAME, WHO, PASSWORD, false)
+		ok = lua_ldap.open_simple (HOSTNAME, WHO, PASSWORD, false)
 	end
 	LD = CONN_OK (ok)
 	CLOSED_LD = ld
@@ -387,8 +386,8 @@ BASE = arg[2]
 WHO = arg[3]
 PASSWORD = arg[4]
 
-require"lualdap"
-assert (type(lualdap)=="table", "couldn't load LDAP library")
+require"lua_ldap"
+assert (type(lua_ldap)=="table", "couldn't load LDAP library")
 
 for i = 1, table.getn (tests) do
 	local t = tests[i]

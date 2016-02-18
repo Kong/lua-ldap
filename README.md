@@ -1,4 +1,4 @@
-KongLdap is based of [LuaLDAP](https://github.com/bdellegrazie/lualdap/)
+lua_ldap is based of [LuaLDAP](https://github.com/bdellegrazie/lualdap/)
 
 LuaLDAP is a simple interface from Lua to an LDAP client, in fact it is a bind to
 OpenLDAP or to ADSI. It enables a Lua program to:

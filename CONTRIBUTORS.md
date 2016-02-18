@@ -1,7 +1,4 @@
-LuaLDAP was released originally by [Kepler Project](http://www.keplerproject.org/lualdap/) but the URL no longer responds
-
-A CVS to Git conversion done by [LuaForge](http://luaforge.net/projects/lualdap/) pointing at [Github](https://github.com/luaforge/lualdap) as the source
-A note was added to the project that if you were the maintainer then send them an email to luaforge@gmail.com to reroot it.
+lua_ldap is based of LuaLDAP which was released originally by [Kepler Project](http://www.keplerproject.org/lualdap/) but the URL no longer responds
 
 Significant contributions were made by:
 

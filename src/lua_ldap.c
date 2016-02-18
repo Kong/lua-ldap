@@ -91,7 +91,7 @@ typedef struct {
 } attrs_data;
 
 
-int luaopen_lualdap (lua_State *L);
+int luaopen_lua_ldap (lua_State *L);
 
 
 /*
@@ -1097,10 +1097,10 @@ static void set_info (lua_State *L) {
 	lua_pushliteral (L, "Copyright (C) 2003-2007 Kepler Project");
 	lua_settable (L, -3);
 	lua_pushliteral (L, "_DESCRIPTION");
-	lua_pushliteral (L, "LuaLDAP is a simple interface from Lua to an LDAP client");
+	lua_pushliteral (L, "lua_ldap is a simple interface from Lua to an LDAP client");
 	lua_settable (L, -3);
 	lua_pushliteral (L, "_VERSION");
-	lua_pushliteral (L, "LuaLDAP 1.2.2");
+	lua_pushliteral (L, "lua_ldap 1.0.0");
 	lua_settable (L, -3);
 }
 
@@ -1108,7 +1108,7 @@ static void set_info (lua_State *L) {
 /*
 ** Create ldap table and register the open method.
 */
-int luaopen_lualdap (lua_State *L) {
+int luaopen_lua_ldap (lua_State *L) {
 	struct luaL_Reg lualdap[] = {
 		{"initialize", lualdap_initialize},
 		{"open_simple", lualdap_open_simple},
