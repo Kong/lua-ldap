@@ -1,0 +1,1 @@
+The original authors and subsequent contributors released this software under the same license as [LUA](http://www.lua.org/license.html) which is simply the [MIT License](http://opensource.org/licenses/mit-license.html)
