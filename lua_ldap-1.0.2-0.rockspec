@@ -2,7 +2,7 @@ package="lua_ldap"
 version="1.0.2-0"
 source = {
   url = "https://github.com/mashape/lua-ldap/archive/1.0.2.tar.gz",
-  dir = "lua-ldap-1.0.2"
+  dir = "lua-ldap-1.0.2",
   tag = "1.0.2"
 }
 description = {
