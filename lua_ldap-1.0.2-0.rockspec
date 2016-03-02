@@ -1,8 +1,9 @@
 package="lua_ldap"
-version="1.0.1-0"
+version="1.0.2-0"
 source = {
-  url = "https://github.com/mashape/lua-ldap/archive/1.0.1.tar.gz",
-  tag = "1.0.1"
+  url = "https://github.com/mashape/lua-ldap/archive/1.0.2.tar.gz",
+  dir = "lua-ldap-1.0.2"
+  tag = "1.0.2"
 }
 description = {
   summary = "Simple interface from Lua to an LDAP Client",
