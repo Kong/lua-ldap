@@ -14,6 +14,7 @@ and both OpenLDAP 2.1 or newer and ADSI.
 
 Files in the distribution:
 
+```
 /src/*      -- Source files
 /tests/*        -- Test files
 /rockspecs/         -- luarocks build system releases
@@ -22,5 +23,6 @@ config          -- Configurations to build on Unix systems (deprecated)
 README.md       -- This file
 CONTRIBUTORS.md -- Who contributed what
 LICENSE.md      -- MIT License reference
+```
 
 Please see CONTRIBUTORS for contribution information and documentation on original source
